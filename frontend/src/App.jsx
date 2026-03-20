@@ -17,7 +17,7 @@ import PremiumCalculator from "./pages/worker/PremiumCalculator";
 import BuyPolicy from "./pages/worker/BuyPolicy";
 import FileClaim from "./pages/worker/FileClaim";
 import TrackStatus from "./pages/worker/TrackStatus";
-const API = "https://gigkavach-1.onrender.com";
+const API = process.env.REACT_APP_API_URL;
 
 
 const WORKER_TABS = [
