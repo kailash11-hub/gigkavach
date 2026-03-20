@@ -20,7 +20,7 @@ import FileClaim from "./pages/worker/FileClaim";
 import TrackStatus from "./pages/worker/TrackStatus";
 
 // ✅ import axios API
-import api from "./api";
+import api from "./services/api";
 
 const WORKER_TABS = [
   { label:"Home", value:"home" },
