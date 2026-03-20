@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = https://gigkavach-1.onrender.com;
+const API = "https://gigkavach-1.onrender.com";
 
 // Attach JWT token to every request
 api.interceptors.request.use(cfg => {
