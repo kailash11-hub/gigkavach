@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "http://127.0.0.1:8000" });
+const api = https://gigkavach-1.onrender.com;
 
 // Attach JWT token to every request
 api.interceptors.request.use(cfg => {
