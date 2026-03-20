@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { ThemeProvider, CssBaseline, Box, Button, AppBar, Toolbar,
   Typography, Tabs, Tab, Avatar, Chip } from "@mui/material";
@@ -16,6 +17,8 @@ import PremiumCalculator from "./pages/worker/PremiumCalculator";
 import BuyPolicy from "./pages/worker/BuyPolicy";
 import FileClaim from "./pages/worker/FileClaim";
 import TrackStatus from "./pages/worker/TrackStatus";
+const API = "https://gigkavach-1.onrender.com";
+
 
 const WORKER_TABS = [
   { label:"Home", value:"home" },
@@ -78,11 +81,9 @@ export default function App() {
   const [authData, setAuthData] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("gs_token");
-    const role = localStorage.getItem("gs_role");
-    const username = localStorage.getItem("gs_username");
-    const worker = localStorage.getItem("gs_worker");
-    if (token && role) setAuthData({ role, username, worker: worker ? JSON.parse(worker) : null });
+   fetch(`${API}/health`)
+  .then(res => res.json())
+  .then(data => console.log(data));
   }, []);
 
   const handleAuth = (data) => setAuthData(data);
