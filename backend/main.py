@@ -22,6 +22,10 @@ app.add_middleware(
 async def startup():
     print("Initializing database...")
     init_db()
+
+    print("Seeding data...")
+    _seed()   # ✅ ADD THIS LINE
+
     print("Startup complete!")
 
 # ❌ DISABLED (too slow for Render)
